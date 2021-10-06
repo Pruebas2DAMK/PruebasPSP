@@ -10,7 +10,7 @@ public class EjecutaProcesoConArgs {
         }
         String linea;
         //Ahora lo recibe como argumento. Modificacion de ejecuta IfConfig
-        Process p = Runtime.getRuntime().exec(args[0]);
+        Process p = Runtime.getRuntime().exec(args);
         try(BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()))){
             while ((linea = br.readLine()) != null) {
                 System.out.println(linea);
