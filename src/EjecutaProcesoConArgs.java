@@ -4,6 +4,10 @@ import java.io.InputStreamReader;
 
 public class EjecutaProcesoConArgs {
     public static void main(String[] args) throws IOException {
+        if (args.length <=0){
+            System.err.println("Debe pasar un comando como argumento");
+            System.exit(-1);
+        }
         String linea;
         //Ahora lo recibe como argumento. Modificacion de ejecuta IfConfig
         Process p = Runtime.getRuntime().exec(args[0]);
