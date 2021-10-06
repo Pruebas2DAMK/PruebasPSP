@@ -10,6 +10,7 @@ public class EjecutaIfConfig {
             while ((linea = br.readLine()) != null) {
                 System.out.println(linea);
             }
+            p.destroy();
         } catch(IOException e){
             e.printStackTrace();
         }
