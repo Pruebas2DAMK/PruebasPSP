@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 
 public class Ejercicio107JSD {
     public static void main(String[] args) {
@@ -47,6 +48,9 @@ public class Ejercicio107JSD {
             //Si la linea contiene ipv4 guardamela en salida
             if (linea.contains("IPv4")){
                 salida+= linea+"\n";
+            }
+            if (linea.contains ("inet")){
+                salida+= linea.trim().split(" ")[1] +"\n";
             }
 
         }
