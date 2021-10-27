@@ -21,6 +21,7 @@ Thread t = new Thread(this,"nuevoHilo");
 }
 class EjecutaHilo{
     public static void main(String[] args) {
-    LlegaBienDeTiempo lbdt = new LlegaBienDeTiempo();
+
+        LlegaBienDeTiempo lbdt = new LlegaBienDeTiempo();
     }
 }
