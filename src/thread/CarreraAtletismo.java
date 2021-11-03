@@ -22,16 +22,18 @@ public class CarreraAtletismo implements Runnable{
         String caracter="_";
         String cadena=caracter.repeat(kilometros);
         for (int i = 0; i <=kilometros ; i++) {
-            //solucionar el replace -Probar con array añadiedo el personaje en cada casilla segun avance
-            System.out.println(cadena.replace("_", "*"));
+
+            System.out.println(cadena.substring(0,i).replace("_", "*")+cadena.substring(i,cadena.length()));
             try {
                 Thread.sleep(cansancio);
-                cansancio+=100;
+                //numeros entre el 1 y 100 sin incluirlos
+                cansancio+=Math.random()*(100-1)+1;
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
         }
+        System.out.println(nombreAtleta+" Felicidades!\nHas recorrido: "+kilometros+"KM");
     }
 
     public static void main(String[] args) {
