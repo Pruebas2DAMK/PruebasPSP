@@ -13,7 +13,6 @@ public class EscribeNumeros extends Thread {
         this.numeroFinal = numeroFinal;
     }
 
-
     public void run(){
         for (int i = numeroInicio; i <= numeroFinal ; i++) {
             try {
@@ -38,7 +37,6 @@ public class EscribeNumeros extends Thread {
         en1.start();
         en1.join();
         en2.start();
-
     }
 }
 class Registra {

@@ -1,4 +1,4 @@
-package Thread_Repaso;
+package thread_Repaso;
 
 public class MiHilo3 implements Runnable{
     private Thread t;

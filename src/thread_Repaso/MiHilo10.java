@@ -1,10 +1,11 @@
-package Thread_Repaso;
+package thread_Repaso;
 
-public class MiHilo6 implements Runnable{
+public class MiHilo10 implements Runnable{
     private Thread t;
     private int id;
     private int n;
-    public MiHilo6(int id, int n) {
+
+    public MiHilo10(int id, int n) {
         this.id = id;
         this.n = n;
         t = new Thread(this);
@@ -16,15 +17,16 @@ public class MiHilo6 implements Runnable{
         for (int i = 1; i <= n ; i++) {
             System.out.println("Vuelta Nº "+i+" HELLO THREAD "+id);
             try {
-                Thread.sleep(1000);
+                Thread.sleep(100L);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                System.out.println("Ha sido interrumpido");
+                return;
             }
         }
 
     }
 
     public static void main(String[] args) {
-        MiHilo6 hilo = new MiHilo6(6,5);
+        MiHilo10 hilo = new MiHilo10(5,5);
     }
 }

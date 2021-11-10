@@ -1,4 +1,4 @@
-package Thread_Repaso;
+package thread_Repaso;
 
 public class MiHilo1 {
     public static void main(String[] args) {

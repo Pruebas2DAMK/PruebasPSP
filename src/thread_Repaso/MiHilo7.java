@@ -1,4 +1,4 @@
-package Thread_Repaso;
+package thread_Repaso;
 
 public class MiHilo7 extends Thread{
     private int id;
