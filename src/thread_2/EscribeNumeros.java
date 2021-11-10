@@ -18,9 +18,9 @@ public class EscribeNumeros extends Thread {
         for (int i = numeroInicio; i <= numeroFinal ; i++) {
             try {
                 Thread.sleep(400);
-                //guarda(nombre+" -> "+i);
+                guarda(nombre+" -> "+i);
                 System.out.println(nombre+" -> "+i);
-            } catch (InterruptedException e) {
+            } catch (InterruptedException | IOException e) {
                 e.printStackTrace();
             }
         }
@@ -43,11 +43,11 @@ public class EscribeNumeros extends Thread {
 }
 class Registra {
     public static void guarda(String salida) throws IOException {
-        String ruta = "E:\\DAM2\\";
-        File f = new File(ruta+"nuevo.txt");
+        String ruta = "./";
+        File f = new File(ruta+"nuevo2.txt");
         creaArchivo(f);
-        PrintWriter pwOut = new PrintWriter(new FileWriter(f.getName()),true);
-        pwOut.write(salida);
+        PrintWriter pwOut = new PrintWriter(new FileWriter(f.getName(),true));
+        pwOut.write(salida+"\n");
         pwOut.close();
     }
     public static void creaArchivo(File f) throws IOException {
